@@ -40,7 +40,7 @@ export default function HomePage() {
           layout="fill"
           objectFit="cover"
           className="absolute inset-0 z-0 opacity-20"
-          data-ai-hint="modern house"
+          data-ai-hint="modern house exterior"
         />
       </section>
 
