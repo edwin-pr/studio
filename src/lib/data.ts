@@ -61,8 +61,8 @@ export const properties: Property[] = [
     address: '123 Main St, Downtown Metropolis, CA 90210',
     images: [
       'https://placehold.co/600x400.png',
-      'https://placehold.co/600x400.png',
-      'https://placehold.co/600x400.png',
+      'https://placehold.co/600x350.png', // varied placeholder
+      'https://placehold.co/580x420.png', // varied placeholder
     ],
     amenities: ['Air Conditioning', 'Balcony', 'Dishwasher', 'Gym Access', 'Parking'],
     availability: 'Available Now',
@@ -83,7 +83,8 @@ export const properties: Property[] = [
     address: '456 Oak Ave, Greenwood Suburbia, TX 78701',
     images: [
       'https://placehold.co/600x400.png',
-      'https://placehold.co/600x400.png',
+      'https://placehold.co/610x390.png', // varied placeholder
+      'https://placehold.co/590x410.png', // varied placeholder
     ],
     amenities: ['Private Garden', 'Garage', 'Pet Friendly', 'Fireplace', 'Hardwood Floors'],
     availability: 'Available from 2024-08-01',
@@ -106,6 +107,7 @@ export const properties: Property[] = [
     address: '789 Tech Rd, Silicon Valley, CA 94043',
     images: [
       'https://placehold.co/600x400.png',
+      'https://placehold.co/550x450.png', // varied placeholder, added a second image
     ],
     amenities: ['Smart Home', 'High-Speed Internet', 'Co-working Space', 'Rooftop Deck', 'Fitness Center'],
     availability: 'Available Now',
@@ -126,9 +128,9 @@ export const properties: Property[] = [
     address: '1 Ocean Drive, Oceanfront Towers, FL 33139',
     images: [
       'https://placehold.co/600x400.png',
-      'https://placehold.co/600x400.png',
-      'https://placehold.co/600x400.png',
-      'https://placehold.co/600x400.png',
+      'https://placehold.co/620x380.png', // varied placeholder
+      'https://placehold.co/580x420.png', // varied placeholder
+      'https://placehold.co/600x410.png', // varied placeholder
     ],
     amenities: ['Ocean View', 'Private Elevator', 'Gourmet Kitchen', 'Terrace', 'Spa Access', 'Concierge', 'Infinity Pool'],
     availability: 'Available Now',
@@ -152,7 +154,7 @@ export const properties: Property[] = [
     address: '101 Factory Lane, Arts District, NY 10013',
     images: [
       'https://placehold.co/600x400.png',
-      'https://placehold.co/600x400.png',
+      'https://placehold.co/610x390.png', // varied placeholder
     ],
     amenities: ['Exposed Brick', 'High Ceilings', 'Polished Concrete Floors', 'Art Studio Access', 'Rooftop Garden'],
     availability: 'Available from 2024-09-15',

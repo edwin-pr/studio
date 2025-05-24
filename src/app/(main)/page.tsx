@@ -36,11 +36,11 @@ export default function HomePage() {
         </div>
          <Image
           src="https://placehold.co/1200x400.png" // Replace with an actual hero image
-          alt="Modern cityscape"
+          alt="Modern house"
           layout="fill"
           objectFit="cover"
           className="absolute inset-0 z-0 opacity-20"
-          data-ai-hint="modern cityscape"
+          data-ai-hint="modern house"
         />
       </section>
 
