@@ -35,11 +35,11 @@ export default function HomePage() {
           </form>
         </div>
          <Image
-          src="https://placehold.co/1200x400.png" // Replace with an actual hero image
-          alt="Modern house"
+          src="https://placehold.co/1200x400.png" 
+          alt="Stylish modern house exterior"
           layout="fill"
           objectFit="cover"
-          className="absolute inset-0 z-0 opacity-25"
+          className="absolute inset-0 z-0 opacity-30"
           data-ai-hint="modern house exterior"
         />
       </section>
