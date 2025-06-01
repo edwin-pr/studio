@@ -45,7 +45,7 @@ export function PropertyImageSlider({ images, altText }: PropertyImageSliderProp
           objectFit="cover"
           className="transition-opacity duration-500 ease-in-out"
           priority={currentIndex === 0} // Prioritize loading the first image
-          data-ai-hint="apartment interior room"
+          data-ai-hint="property interior"
         />
       </div>
 

@@ -29,7 +29,7 @@ export function PropertyCard({ property }: PropertyCardProps) {
             width={400}
             height={250}
             className="w-full h-48 object-cover"
-            data-ai-hint="apartment exterior building"
+            data-ai-hint="property exterior"
           />
         </Link>
         <Button
