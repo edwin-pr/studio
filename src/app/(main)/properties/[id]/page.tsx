@@ -13,12 +13,13 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { BedDouble, Bath, HomeIcon, MapPin, CheckCircle, CalendarDays, Users, ShieldCheck, Tag } from 'lucide-react';
+import { BedDouble, Bath, HomeIcon, MapPin, CheckCircle, CalendarDays, Users, ShieldCheck, Tag, QrCode } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import { BookingConfirmationDialog } from '@/components/BookingConfirmationDialog';
 import { useToast } from '@/hooks/use-toast';
 import { Skeleton } from '@/components/ui/skeleton';
+import { Input } from '@/components/ui/input';
 
 
 export default function PropertyDetailsPage() {
@@ -27,12 +28,16 @@ export default function PropertyDetailsPage() {
   
   const [property, setProperty] = useState<Property | null | undefined>(undefined); // undefined for loading state
   const [isBookingDialogOpen, setIsBookingDialogOpen] = useState(false);
+  const [currentUrl, setCurrentUrl] = useState('');
   const { toast } = useToast();
 
   useEffect(() => {
     if (id) {
       const fetchedProperty = getPropertyById(id);
       setProperty(fetchedProperty);
+    }
+    if (typeof window !== 'undefined') {
+      setCurrentUrl(window.location.href);
     }
   }, [id]);
 
@@ -192,6 +197,41 @@ export default function PropertyDetailsPage() {
               </div>
             </AccordionContent>
           </AccordionItem>
+          <AccordionItem value="item-4">
+            <AccordionTrigger className="text-xl font-semibold hover:no-underline">
+               <QrCode className="h-6 w-6 mr-2 text-primary" /> Share / View on Device
+            </AccordionTrigger>
+            <AccordionContent className="space-y-4 text-center">
+                <div className="flex justify-center">
+                    <Image
+                        src="https://placehold.co/150x150.png"
+                        alt="QR code for property details"
+                        width={150}
+                        height={150}
+                        className="rounded-md shadow-md"
+                        data-ai-hint="qr code"
+                    />
+                </div>
+              <p className="text-sm text-muted-foreground">
+                Scan this QR code with your phone to quickly open these property details or share them with someone.
+              </p>
+              {currentUrl && (
+                <div className="mt-3">
+                  <Label htmlFor="propertyUrl" className="text-xs text-muted-foreground">Or copy this link:</Label>
+                  <Input 
+                    id="propertyUrl" 
+                    readOnly 
+                    value={currentUrl} 
+                    className="mt-1 text-center text-sm" 
+                    onClick={(e) => (e.target as HTMLInputElement).select()} 
+                  />
+                </div>
+              )}
+              <p className="text-xs text-muted-foreground mt-2">
+                For a real application, this QR code would be dynamically generated.
+              </p>
+            </AccordionContent>
+          </AccordionItem>
         </Accordion>
       </div>
 
@@ -239,6 +279,7 @@ function PropertyDetailsSkeleton() {
         </div>
 
         <div className="p-4 border rounded-lg space-y-4">
+          <Skeleton className="h-10 w-full" />
           <Skeleton className="h-10 w-full" />
           <Skeleton className="h-10 w-full" />
           <Skeleton className="h-10 w-full" />
