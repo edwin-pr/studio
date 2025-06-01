@@ -1,12 +1,12 @@
 
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google'; // Changed from GeistSans
+import { Inter } from 'next/font/google';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import { FavoritesProvider } from '@/contexts/FavoritesContext';
 
-const inter = Inter({ // Changed from geistSans
-  variable: '--font-inter', // Changed variable name
+const inter = Inter({
+  variable: '--font-inter',
   subsets: ['latin'],
 });
 
@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}> {/* Apply the new font variable */}
+    <html lang="en" className={inter.variable}>
       <body className="antialiased font-sans">
         <FavoritesProvider>
           {children}
