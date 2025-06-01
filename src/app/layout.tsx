@@ -22,6 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        {/* Next.js will automatically inject metadata and other head elements here */}
+      </head>
       <body className="antialiased font-sans">
         <FavoritesProvider>
           {children}
